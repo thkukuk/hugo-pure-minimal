@@ -1,0 +1,12 @@
+name = "hugo-pure-minimal"
+description = "Minimalistic hugo theme based on pureCSS"
+license = "MIT"
+licenselink = "https://github.com/thkukuk/hugo-pure-minimal/blob/main/LICENSE"
+homepage = "https://github.com/thkukuk/hugo-pure-minimal/"
+tags = ["responsive", "minimal"]
+features = ["responsive"]
+min_version = "0.108.0"
+
+[author]
+    name = "Thorsten Kukuk"
+    homepage = "https://www.thkukuk.de/"

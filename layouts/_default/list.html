@@ -1,0 +1,58 @@
+{{ partial "header" . }}
+
+<div class="post">
+
+  <div class="post-title">
+    <h1>{{ if .Draft }}DRAFT: {{end}}{{ .Title }}</h1>
+      {{ if not .Date.IsZero }}
+      <p>
+        <div class="published-date">
+	{{ partial "icon/calendar" (dict "size" "18px")}}
+        {{- if .Site.Params.dateformatpretty }}
+          <span>{{ .Date.Format .Site.Params.dateformatpretty }}</span>
+        {{- else -}}
+          <span>{{ .Date.Format "02-01-2006" }}</span>
+        {{ end -}}
+        {{- if .Params.Author }}
+          <span> - {{ .Params.Author }}</span>
+        {{ end -}}
+        </div>
+      </p>
+      {{ end }}
+  </div>
+
+  <div class="post-content">
+    {{ if or .Params.toc (and (eq .Params.toc nil) .Site.Params.toc) -}}
+    {{ .TableOfContents }}
+    {{- end }}
+
+    {{- if .Content -}}
+      {{ replace .Content "<table>" "<table class='pure-table pure-table-striped'>" | safeHTML }}
+    {{- end -}}
+
+    <ul class="posts">
+      {{- $baseurl := .Site.BaseURL -}}
+      {{- $sortOrder := .Page.Params.Sort | default (.Site.Params.Sort | default "desc") -}}
+      {{- $pages := .Data.Pages -}}
+
+      {{ range sort $pages "Date" $sortOrder }}
+      <li>
+        {{- if .Draft }} DRAFT: {{ end -}}
+        <a class="post-list" href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+        <p class="footnote">
+          <time datetime="{{ .Date }}">
+          {{- if .Site.Params.dateformatpretty -}}
+            {{ .Date.Format .Site.Params.dateformatpretty }}
+          {{- else -}}
+            {{ .Date.Format "02-01-2006" }}
+          {{- end -}}
+          </time>
+        </p>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+
+{{ partial "footer" . }}
