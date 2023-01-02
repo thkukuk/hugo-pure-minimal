@@ -318,32 +318,3 @@ kbd, pre, code, samp {
   }
 }
 
-.list-table table {
-  border-collapse: collapse;
-  border: thin solid #ddd;
-  /* width: 100%; */
-}
-
-.list-table td {
-      border: thin solid #ddd;
-      padding: 5px;
-      text-align: left;
-    }
-
-.list-table td.text { text-align: left; }
-.list-table th.text { text-align: left; }
-.list-table td.number { text-align: right; }
-
-.list-table tr:nth-child(odd){background-color: #f2f2f2;}
-
-.list-table tr:hover {background-color: #ddd;}
-
-.list-table th {
-  border: 1px solid #ddd;
-  padding: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  background-color: grey;
-  color: white;
-}
