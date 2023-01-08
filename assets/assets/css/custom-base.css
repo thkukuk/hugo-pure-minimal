@@ -63,6 +63,12 @@ kbd, pre, code, samp {
   border-bottom: 1px solid var(--color-menu-border);
 }
 
+.pure-menu .site-title {
+  color: var(--color);
+  text-transform: none;
+  font-weight: 400;
+}
+
 .pure-menu-heading {
   text-transform: none;
   font-size: large;
@@ -81,7 +87,7 @@ kbd, pre, code, samp {
   border: 1px solid #dadde1;
 }
 
-.size {
+.pure-table .size {
   text-align: right;
   white-space: nowrap;
 }
@@ -89,6 +95,7 @@ kbd, pre, code, samp {
 .header {
   text-align: left;
   color: var(--color);
+  font-weight: bold;
   margin-bottom: .5em;
 }
 
@@ -99,17 +106,6 @@ kbd, pre, code, samp {
 .header ul li a {
   font-weight: bold;
   color: var(--color);
-}
-
-.header {
-  font-weight: bold;
-  color: var(--color);
-}
-
-.site-title {
-  color: var(--color);
-  text-transform: none;
-  font-weight: 400;
 }
 
 .pull-right {
@@ -177,22 +173,9 @@ kbd, pre, code, samp {
   padding: 0;
 }
 
-#gototop-btn {
-  display: inline-block;
-}
-
 #foot-copyright {
   padding-bottom: 0.5em;
   margin: 0;
-}
-
-.posts-content img {
-  max-width: 100%;
-  height: auto;
-}
-
-.posts-content pre {
-  padding: 0.5em;
 }
 
 .published-date, .reading-time {
@@ -206,45 +189,5 @@ kbd, pre, code, samp {
 .published-date .icon, .reading-time .icon {
   margin-right: 5px;
   display: inline-block;
-}
-
-
-@media screen and (max-width: 768px) {
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  #toggle-btn {
-    display: inline-block;
-    float: right;
-    padding: .5em 1em;
-    text-decoration: none;
-    color: var(--color);
-    font-weight: bold;
-  }
-
-  #toggle-content li {
-    clear: both;
-    height: auto;
-    background-color: var(--background-color-toggle-content);
-  }
-
-  #toggle-home {
-    display: inline-block;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .mobile {
-    display: none;
-  }
-
-  .desktop {
-    display: block;
-  }
 }
 

@@ -1,11 +1,10 @@
 /* Light mode -- this is the default! */
 :root {
     --background-color-code: #f0f0f0;
-    --background-color-toggle-content: #f9f9f9;
     --background-color: #fcfcfc;
     --background-table-head: #bec3c9;
     --color-footer-border: #e3e3e3;
-    --color-footer-content: #777777;
+    --color-footer-content: #575757;
     --color-footnote: #575757;
     --color-menu-border: #e3e3e3; /* #484848;*/
     --color-table-head: #000000;
