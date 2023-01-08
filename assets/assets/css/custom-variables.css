@@ -1,13 +1,19 @@
 /* Light mode -- this is the default! */
 :root {
-  --color: #484848;
-  --color-footnote: #575757;
-  --color-footer-content: #bbb;
-  --background-color: rgb(252, 252, 252);
-  --background-color-code: rgb(240, 240, 240);
-  --background-color-toggle-content: rgb(249, 249, 249);
-  --link-color: #c05b4d;
-  --link-color-hover: #a5473a;
-  --list-link-color: #336699;
-  --border-navbar-and-footer: #e3e3e3;
+    --background-color-code: #f0f0f0;
+    --background-color-toggle-content: #f9f9f9;
+    --background-color: #fcfcfc;
+    --background-table-head: #bec3c9;
+    --color-footer-border: #e3e3e3;
+    --color-footer-content: #777777;
+    --color-footnote: #575757;
+    --color-menu-border: #e3e3e3; /* #484848;*/
+    --color-table-head: #000000;
+    --color: #484848;
+    --font-family-header: "Montserrat", "Helvetica Neue", sans-serif;
+    --font-family-main: "Raleway", "Helvetica Neue", sans-serif;
+    --font-size-main: 16px;
+    --link-color-hover: #a5473a;
+    --link-color: #c05b4d;
+    --list-link-color: #336699;
 }
