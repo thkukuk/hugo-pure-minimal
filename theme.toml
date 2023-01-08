@@ -1,8 +1,8 @@
-name = "hugo-pure-minimal"
-description = "Minimalistic hugo theme based on pureCSS"
+name = "hugo-pure-personal"
+description = "Hugo theme based on pureCSS for personal hompages"
 license = "MIT"
-licenselink = "https://github.com/thkukuk/hugo-pure-minimal/blob/main/LICENSE"
-homepage = "https://github.com/thkukuk/hugo-pure-minimal/"
+licenselink = "https://github.com/thkukuk/hugo-pure-personal/blob/main/LICENSE"
+homepage = "https://github.com/thkukuk/hugo-pure-personal/"
 tags = ["responsive", "minimal"]
 features = ["responsive"]
 min_version = "0.108.0"
