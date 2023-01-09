@@ -6,12 +6,12 @@
       <ul class="pure-menu-list pull-right">
       {{ range .Site.Menus.main }}
         <li class="pure-menu-item {{ if .HasChildren }}pure-menu-has-children pure-menu-allow-hover{{ end }}">
-          <a href="{{ relURL .URL }}" id="menu-id-{{ .Name }}" class="pure-menu-link">{{ .Name }}</a>
+          <a href="{{ relURL .URL }}" class="pure-menu-link">{{ .Name }}</a>
           {{ if .HasChildren }}
           <ul class="pure-menu-children">
             {{ range .Children }}
             <li class="pure-menu-item">
-              <a href="{{ relURL .URL }}" id="menu-id-{{ .Name }}" class="pure-menu-link">{{ .Name }}</a>
+              <a href="{{ relURL .URL }}" class="pure-menu-link">{{ .Name }}</a>
             </li>
             {{ end }}
           </ul>
