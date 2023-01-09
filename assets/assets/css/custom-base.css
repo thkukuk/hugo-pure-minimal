@@ -74,10 +74,6 @@ kbd, pre, code, samp {
   font-size: large;
 }
 
-.pure-menu-link:hover {
-  background-color: unset;
-}
-
 .pure-table th {
   background-color: var(--background-table-head);
   color: var(--color-table-head);
