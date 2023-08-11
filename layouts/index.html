@@ -1,5 +1,27 @@
 {{ partial "header" . }}
 
-    {{ .Content }}
+  {{ .Content }}
+
+  {{ if or .Page.Params.ShowSubPages (and (eq .Page.Params.ShowSubPages nil) .Site.Params.ShowSubPages) -}}
+    <ul>
+      {{- $sortOrder := .Page.Params.Sort | default (.Site.Params.Sort | default "desc") -}}
+      {{- $pages := .Data.Pages -}}
+      {{ range sort $pages "Title" $sortOrder }}
+      <li>
+      {{- if .Draft }} DRAFT: {{ end -}}
+        <a class="post-list" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <p class="footnote">
+          <time datetime="{{ .Date }}">
+          {{- if .Site.Params.dateformatpretty -}}
+            {{ .Date.Format .Site.Params.dateformatpretty }}
+          {{- else -}}
+            {{ .Date.Format "02-01-2006" }}
+          {{- end -}}
+          </time>
+        </p>
+      </li>
+      {{- end -}}
+    </ul>
+  {{- end -}}
 
 {{ partial "footer" . }}
