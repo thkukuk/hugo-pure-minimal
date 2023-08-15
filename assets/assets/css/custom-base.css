@@ -72,6 +72,16 @@ kbd, pre, code, samp {
 .pure-menu-heading {
   text-transform: none;
   font-size: large;
+  padding-left: 0.5em;
+}
+
+.breadcrumb {
+  padding-left: 0.5em;
+}
+
+.breadcrumb .pure-menu-heading {
+  padding-right: 0em;
+  padding-left: 0em;
 }
 
 .pure-table th {
