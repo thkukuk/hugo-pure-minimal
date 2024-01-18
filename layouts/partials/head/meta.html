@@ -1,8 +1,8 @@
 <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <meta name='description' content='{{ .Params.description }}'>
-{{- if .Site.Author.name }}
-  <meta name='author' content="{{ .Site.Author.name }}">
+{{- if .Site.Params.Author.name }}
+  <meta name='author' content="{{ .Site.Params.Author.name }}">
 {{- end }}
 {{- if .Site.Params.accentColor }}
   <meta name='theme-color' content='{{- .Site.Params.accentColor -}}'>
