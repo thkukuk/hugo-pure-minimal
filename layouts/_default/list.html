@@ -12,19 +12,15 @@
   </div>
   {{ end }}
 
-  {{ if or .Params.tags .Params.categories .Params.series }}
+  {{ if or .Params.tags .Params.categories }}
     |
   {{ end }}
   {{ if and .Params.tags (isset .Params "tags") }}
-    tags: [ {{ range .Params.tags }}<a href="{{ relURL "tags/" }}{{ . | urlize }}">{{ . }}</a> {{ end }}]
+    {{ i18n "tags" -}}: [ {{ range .Params.tags }}<a href="{{ relURL "tags/" }}{{ . | urlize }}">{{ . }}</a> {{ end }}]
   {{ end }}
 
   {{ if and .Params.categories (isset .Params "categories") }}
-    categories: [ {{ range .Params.categories }}<a href="{{ relURL "categories/" }}{{ . | urlize }}">{{ . }}</a> {{ end }}]
-  {{ end }}
-
-  {{ if and .Params.series (isset .Params "series") }}
-    series: [ {{ range .Params.series }}<a href="{{ relURL "series/" }}{{ . | urlize }}">{{ . }}</a> {{ end }}]
+    {{ i18n "categories" -}}: [ {{ range .Params.categories }}<a href="{{ relURL "categories/" }}{{ . | urlize }}">{{ . }}</a> {{ end }}]
   {{ end }}
 </p>
 
