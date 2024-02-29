@@ -5,11 +5,7 @@
   {{ if not .Date.IsZero }}
   <div class="published-date">
   {{ partial "icon/calendar" (dict "size" "18px")}}
-  {{- if .Site.Params.dateformatpretty }}
-    <span>{{ .Date.Format .Site.Params.dateformatpretty }}</span>
-  {{- else -}}
-    <span>{{ .Date.Format "January 2, 2006" }}</span>
-  {{ end -}}
+    <span>{{ .Date | time.Format ":date_long" }}</span>
   {{- if .Params.Author }}
     <span> - {{ .Params.Author }}</span>
   {{ end -}}
@@ -50,11 +46,7 @@
     <a class="post-list" href="{{ .RelPermalink }}">{{ .Title }}</a>
     <p class="footnote">
       <time datetime="{{ .Date }}">
-        {{- if .Site.Params.dateformatpretty -}}
-          {{ .Date.Format .Site.Params.dateformatpretty }}
-        {{- else -}}
-          {{ .Date.Format "02-01-2006" }}
-        {{- end -}}
+        {{ .Date | time.Format ":date_medium" }}
       </time>
     </p>
   </li>
