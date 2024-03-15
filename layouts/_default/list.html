@@ -41,8 +41,8 @@
     {{- if .Draft }} DRAFT: {{ end -}}
     <a class="post-list" href="{{ .RelPermalink }}">{{ .Title }}</a>
     <p class="footnote">
-      <time datetime="{{ .Date }}">
-        {{ .Date | time.Format ":date_medium" }}
+      <time datetime="{{ .Date | safeHTML }}">
+        {{ .Date | time.Format ":date_long" }}
       </time>
     </p>
   </li>
